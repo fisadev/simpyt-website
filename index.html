@@ -29,32 +29,51 @@
         <p>
             <img src="images/screenshot.png" />
         </p>
-        <h1>
-            <span id="tab-link-install" class="tab-link" 
-                  data-tab-id="tab-install" data-tab-group="installation">
-                Install
-            </span> | 
-            <span id="tab-link-upgrade" class="tab-link" 
-                  data-tab-id="tab-upgrade" data-tab-group="installation">
-                Upgrade
-            </span>
-        </h1>
-        <div id="tab-install" class="tab" data-tab-group="installation">
-            <p>
-                Blabla
-            </p>
-        </div>
-
-        <div id="tab-upgrade" class="tab" data-tab-group="installation">
-            <p>
-                Blabla
-            </p>
-        </div>
 
         <h1>
-            How to use
+            Installation
         </h1>
         <div>
+            <p>
+                First <a href="https://www.python.org/downloads/"> download and install Python 3 from the official website</a> 
+                (on Linux any modern Python 3 will do).
+            </p>
+            <p>
+                Then <a href="https://github.com/fisadev/simpyt/releases">download the latest Simpyt.pyz release</a> and save it anywhere you want.
+            </p>
+            <p>
+                And finally run (double click) the <strong>simpyt.pyz</strong> file, and go to <a href="http://127.0.0.1:9999">http://127.0.0.1:9999</a> in your web browser.
+            </p>
+            <p>
+                That's it!
+            </p>
+            <p>
+                The first time you run it will take a few seconds to boot and create a <strong>simpyt_configs</strong> folder with some demo button boxes, where all your configs live. 
+                The next time it should start up almost instantaneously.
+            </p>
+            <p>
+                No extra apps are needed in the devices you want to use as virtual button boxes (old phones or tablets are ideal). You only need a working web browser in them.
+            </p>
+        </div>
+
+        <h1>
+            How to use:
+            <span id="tab-link-use-web" class="tab-link" 
+                  data-tab-id="tab-use-web" data-tab-group="use">
+                a cellphone
+            </span> | 
+            <span id="tab-link-use-midi" class="tab-link" 
+                  data-tab-id="tab-use-midi" data-tab-group="use">
+                a midi controller
+            </span>
+        </h1>
+        <div id="tab-use-web" class="tab" data-tab-group="use">
+            <p>
+                Blabla
+            </p>
+        </div>
+
+        <div id="tab-use-midi" class="tab" data-tab-group="use">
             <p>
                 Blabla
             </p>
@@ -88,7 +107,7 @@
         }
         $(function() {
             $('.tab-link').click(tabLinkOnClick);
-            $('#tab-link-install').click();
+            $('#tab-link-use-web').click();
         });
     </script>
 
