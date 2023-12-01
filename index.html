@@ -60,7 +60,75 @@
             </summary>
             <div class="contents">
                 <p>
-                    Blabla
+                    <img src="images/phone.png" />
+                </p>
+                <h2>Basic steps</h2>
+                <p>
+                    To use a phone or tablet as a button box, you need to:
+                    <ul>
+                        <li>Define a "page" with buttons in Simpyt's configs</li>
+                        <li>Launch Simpyt.pyz in your PC</li>
+                        <li>Browse to <strong>http://YOUR_PC_IP_ADDRESS:9999/</strong> from your phone or tablet</li>
+                    </ul>
+                </p>
+                <h2>Button pages</h2>
+                <p>
+                    The button pages are defined as files inside the <strong>simpyt_configs/pages</strong> folder.
+                    Each page is a single text file with <strong>.page</strong> extension with some basic settings, 
+                    the list of buttons to show, and what they do. 
+                </p>
+                <p>
+                    To create or edit them, you can use Notepad or any code editor you like.
+                    You can have as many pages as you need and even use them at the same time from different devices.
+                    It's time to revive all those old phones :D
+                </p>
+                <p>
+                    Example of a simple page file:
+                </p>
+                <p>
+<pre>
+background_image: tomcat_countermeasures_pannel.png
+width: 200
+height: 130
+controls:
+- at: 10 50 size 5 5
+  action: keys ctrl shift a
+- at: 20 50 size 5 5
+  action: keys ctrl shift b
+</pre>
+                </p>
+                <p>
+                    (in case this looks familiar: yes, it's yaml :D)
+                </p>
+                <p>
+                    That page would show an image of a Tomcat cockpit pannel (which should be added in the 
+                    <strong>simpyt_configs/images</strong> folder), with a couple of clickeable buttons that 
+                    fire some key presses in your computer when clicked. 
+                    You would map those keys to controls in your flight sim, and that's it! A working button 
+                    box :)
+                </p>
+                <h2>Using them from a phone or tablet</h2>
+                <p>
+                    To show the button box in a phone or tablet, just connect the device to the same wifi network 
+                    than your pc and browse to <strong>http://YOUR_PC_IP_ADDRESS:9999/</strong> (don't forget to 
+                    run <strong>Simpyt.pyz</strong> in your PC before).
+                </p>
+                <h2>What else can be done</h2>
+                <p>
+                    The page and buttons are fully customizable (text, color, borders, images, etc). And when using 
+                    a background image with something like a screenshot of an aircraft real pannel, you can make the 
+                    simpyt buttons "invisible" and just rely on the background image instead. Simpyt comes with a 
+                    demo of an F-16 Viper panel configured this way.
+                </p>
+                <p>
+                    Buttons can simulate key presses, joystick button presses, joystick axis movements, open apps, or even 
+                    run full scripts of multiple actions.
+                </p>
+                <p>
+                    <strong>Examples and full docs on the attributes of buttons and pages <a href="https://github.com/fisadev/simpyt/blob/main/docs/pages.md">here</a>.</strong>
+                </p>
+                <p>
+                    <strong>Examples and full docs full docs on the actions they can run <a href="https://github.com/fisadev/simpyt/blob/main/docs/actions.md">here</a>.</strong>
                 </p>
             </div>
         </details>
@@ -72,7 +140,55 @@
             </summary>
             <div class="contents">
                 <p>
-                    Blabla
+                    <img src="images/midi.png" />
+                </p>
+                <h2>Basic steps</h2>
+                <p>
+                    To use a midi controller as a button box, you need to:
+                    <ul>
+                        <li>Define a "midi device" in Simpyt's configs</li>
+                        <li>Launch Simpyt.pyz in your PC</li>
+                        <li>Use the midi device :)</li>
+                    </ul>
+                </p>
+                <h2>Midi devices</h2>
+                <p>
+                    Midi devices are defined as files inside the <strong>simpyt_configs/midis</strong> folder.
+                    Each device is a single text file with <strong>.midi_device</strong> extension with some basic settings, 
+                    the list of controls to handle, and what they do when used.
+                </p>
+                <p>
+                    To create or edit them, you can use Notepad or any code editor you like.
+                    You can have as many devices as you need and even use them at the same time.
+                </p>
+                <p>
+                    Example of a basic midi device file:
+                </p>
+                <p>
+<pre>
+name: MY-PIANO-BRAND-XYZ
+controls:
+- when: note 42 surpasses 64
+  action: keys escape
+- when: control 40 between 0-127
+  action: joystick 1 axis 1
+</pre>
+                </p>
+                <p>
+                    Thats a simple config that tries to connect to a midi device called "MY-PIANO-BRAND-XYZ" (this should be 
+                    the name that the midi device has in your system when plugged in). It fires the escape key when a note is 
+                    played in the piano, and simulates a virtual joystick axis when a particular knob is turned.
+                </p>
+                <h2>What else can be done</h2>
+                <p>
+                    Different types of midi controls are supported and they can simulate key presses, joystick buttons or axis, 
+                    open apps, or even run full scripts of actions.
+                </p>
+                <p>
+                    <strong>Examples and full docs on the configuration of midi devices <a href="https://github.com/fisadev/simpyt/blob/main/docs/midis.md">here</a>.</strong>
+                </p>
+                <p>
+                    <strong>Examples and full docs full docs on the actions they can run <a href="https://github.com/fisadev/simpyt/blob/main/docs/actions.md">here</a>.</strong>
                 </p>
             </div>
         </details>
