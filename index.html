@@ -26,48 +26,55 @@
             <img src="images/idea.png" />
         </p>
 
-        <h1 id="installation">
-            Installation
-        </h1>
-        <div>
-            <p>
-                First download and install <a href="https://www.python.org/downloads/">Python 3 from the official website</a> 
-                (on Linux any modern Python 3 will do).
-            </p>
-            <p>
-                Then <a href="https://github.com/fisadev/simpyt/releases">download</a> the latest Simpyt.pyz release.
-            </p>
-            <p>
-                And finally run (double click) the <strong>simpyt.pyz</strong> file, and go to <a href="http://127.0.0.1:9999">http://127.0.0.1:9999</a> 
-                in your PC web browser, or to http://YOUR_PC_IP_ADDRESS:9999/ from a cellphone or tablet.
-            </p>
-            <p>
-                That's it! You don't even need to install anything in your phone or tablet, just the web browser.
-            </p>
-        </div>
+        <details>
+            <summary>
+                <h1 id="installation">Installation</h1>
+                <span class="icon">▼</span>
+            </summary>
+            <div class="contents">
+                <p>
+                    First download and install <a href="https://www.python.org/downloads/">Python 3 from the official website</a> 
+                    (on Linux any modern Python 3 will do).
+                </p>
+                <p>
+                    Then <a href="https://github.com/fisadev/simpyt/releases">download</a> the latest Simpyt.pyz release.
+                </p>
+                <p>
+                    And finally run (double click) the <strong>simpyt.pyz</strong> file, and go to <a href="http://127.0.0.1:9999">http://127.0.0.1:9999</a> 
+                    in your PC web browser, or to http://YOUR_PC_IP_ADDRESS:9999/ from a cellphone or tablet.
+                </p>
+                <p>
+                    That's it! You don't even need to install anything in your phone or tablet, just the web browser.
+                </p>
+            </div>
+        </details>
 
-        <h1 id="how-to-use">
-            How to use:
-            <span id="tab-link-use-web" class="tab-link" 
-                  data-tab-id="tab-use-web" data-tab-group="use">
-                a cellphone
-            </span> | 
-            <span id="tab-link-use-midi" class="tab-link" 
-                  data-tab-id="tab-use-midi" data-tab-group="use">
-                a midi controller
-            </span>
-        </h1>
-        <div id="tab-use-web" class="tab" data-tab-group="use">
-            <p>
-                Blabla
-            </p>
-        </div>
+        <span id="how-to-use"></span>
 
-        <div id="tab-use-midi" class="tab" data-tab-group="use">
-            <p>
-                Blabla
-            </p>
-        </div>
+        <details>
+            <summary>
+                <h1>How to use with a phone or tablet</h1>
+                <span class="icon">▼</span>
+            </summary>
+            <div class="contents">
+                <p>
+                    Blabla
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h1>How to use with a midi controller</h1>
+                <span class="icon">▼</span>
+            </summary>
+            <div class="contents">
+                <p>
+                    Blabla
+                </p>
+            </div>
+        </details>
+
 
         <footer class="site-footer">
             <span>
@@ -82,24 +89,6 @@
             </span>
       </footer>
     </section>
-
-    <script>
-        function tabLinkOnClick(e) {
-            var clickedLink = $(e.target);
-            var activeTab = $('#' + clickedLink.data('tab-id'));
-            var tabGroup = clickedLink.data('tab-group');
-
-            $('.tab[data-tab-group=' + tabGroup + ']').not(activeTab).hide();
-            activeTab.fadeIn();
-
-            clickedLink.removeClass('inactive');
-            $('.tab-link[data-tab-group=' + tabGroup + ']').not(clickedLink).addClass('inactive');
-        }
-        $(function() {
-            $('.tab-link').click(tabLinkOnClick);
-            $('#tab-link-use-web').click();
-        });
-    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- TODO -->

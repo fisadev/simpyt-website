@@ -1,35 +1,45 @@
-.tab-link:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.tab-link.inactive {
-    opacity: 0.4;
-}
-
-.demo-video {
-    max-width: 800px;
-}
-
-.demo-video:focus {
-    outline: none;
-}
-
-.feature-description samp {
-    color: #159957;
-    font-weight: bold;
-}
-
-.features li:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-#good-news {
-    background: #2DD6BA; 
-    padding: 20px;
-}
-
 #logo {
     max-height: 200px;
     max-width: 200px;
+}
+
+details {
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+details div.contents {
+    background-color: #F9F9F9;
+    padding: 2em;
+}
+
+details>summary span.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+    margin-left: auto;
+}
+
+details[open] summary span.icon {
+    transform: rotate(180deg);
+}
+
+summary {
+    display: flex;
+    cursor: pointer;
+    background-color: #444444;
+    /*background-color: #e0a900ff;*/
+    /*background-color: #fac32d;*/
+    /*color: #FFFFFF;*/
+    color: #FAC32D;
+    padding: 1em;
+}
+
+details summary h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
 }
